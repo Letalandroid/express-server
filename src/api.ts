@@ -12,6 +12,10 @@ app.use(express.text({ type: 'text/html' }));
 
 const api = express.Router();
 
+api.get('/', (req, res) => {
+  res.send('🚀 Server is running')
+})
+
 api.post('/', (req, res) => {
   const transporter = nodemailer.createTransport({
     host: 'smtp.gmail.com',
